@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: #333232;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  padding: 1em;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+  z-index: 100;
+}
+
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.burger-btn:hover .burger-btn__bars::after, .burger-btn:hover .burger-btn__bars::before, .burger-btn:hover .burger-btn__bars {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.burger-btn__bars {
+  -webkit-transform: scale(0.8) rotate(5deg);
+          transform: scale(0.8) rotate(5deg);
+}
+
+.burger-btn__bars::before {
+  top: 13px;
+  -webkit-transform: scale(0.8) rotate(-15deg);
+          transform: scale(0.8) rotate(-15deg);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.burger-btn__bars::after {
+  top: 27px;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+/*# sourceMappingURL=main.css.map */
