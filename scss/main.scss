@@ -1,4 +1,9 @@
 @import "variables";
+@import "animation"
+
+//		NAVIGATION   20-70
+//		HEADER	73-
+
 
 *,
 *::before,
@@ -63,6 +68,39 @@ html {
             transform:rotate(-15deg);
             transition-delay:0.2s;
 		}
+	}
+}
+
+//  \\\         H E A D E R        ///
+.header{
+	height: 100vh;
+	width:100vw;
+	background-image: url(/img/photographer-g9dd126508_1920.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index:1;
+	&::after{
+		content: '';
+		position: absolute;
+		inset:0;
+		background-color: $first-color;
+		mix-blend-mode: multiply;
+		z-index: -1;
+
+	}
+	&__arrow{
+		// position: absolute;
+		display:flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 100%;
+		color: $white;
+		z-index: 10;
+		font-size: 6rem;
+		padding-bottom:0.5em;
+		
 	}
 }
 
