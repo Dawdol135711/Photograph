@@ -1,9 +1,8 @@
 @import "variables";
-@import "animation"
+@import "animation";
 
 //		NAVIGATION   20-70
 //		HEADER	73-
-
 
 *,
 *::before,
@@ -35,11 +34,13 @@ html {
 		border: 1px solid rgba(255, 255, 255, 0.5);
 		border-radius: 5px;
 	}
-    &:hover{
-        .burger-btn__bars::after, .burger-btn__bars::before,.burger-btn__bars{
-            transform:scale(1) rotate(0deg)
-        }
-    }
+	&:hover {
+		.burger-btn__bars::after,
+		.burger-btn__bars::before,
+		.burger-btn__bars {
+			transform: scale(1) rotate(0deg);
+		}
+	}
 	&__box {
 		position: relative;
 		width: 40px;
@@ -57,50 +58,47 @@ html {
 		transition: transform 0.3s;
 	}
 	&__bars {
-        transform:scale(0.8) rotate(5deg);
+		transform: scale(0.8) rotate(5deg);
 		&::before {
 			top: 13px;
-            transform:scale(0.8) rotate(-15deg);
-            transition-delay:0.1s;
+			transform: scale(0.8) rotate(-15deg);
+			transition-delay: 0.1s;
 		}
 		&::after {
 			top: 27px;
-            transform:rotate(-15deg);
-            transition-delay:0.2s;
+			transform: rotate(-15deg);
+			transition-delay: 0.2s;
 		}
 	}
 }
 
 //  \\\         H E A D E R        ///
-.header{
+.header {
 	height: 100vh;
-	width:100vw;
+	width: 100vw;
 	background-image: url(/img/photographer-g9dd126508_1920.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	z-index:1;
-	&::after{
-		content: '';
+	z-index: 1;
+	&::after {
+		content: "";
 		position: absolute;
-		inset:0;
+		inset: 0;
 		background-color: $first-color;
 		mix-blend-mode: multiply;
 		z-index: -1;
-
 	}
-	&__arrow{
-		// position: absolute;
-		display:flex;
-		justify-content: center;
-		align-items: flex-end;
-		height: 100%;
+	&__link {
+		position:absolute;
+		bottom:0.5em;
+		left:50%;
+		transform: translatex(-50%);
+		text-decoration: none;
 		color: $white;
 		z-index: 10;
 		font-size: 6rem;
-		padding-bottom:0.5em;
-		
 	}
 }
 
