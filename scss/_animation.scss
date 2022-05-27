@@ -115,3 +115,11 @@
     }
   }
   
+  @keyframes rotate{
+      0%{
+          transform:perspective(1800px) rotateY(0deg)
+      }
+      100%{
+        transform:perspective(1800px) rotateY(360deg)
+      }
+  }

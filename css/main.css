@@ -113,6 +113,28 @@
   }
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: perspective(1800px) rotateY(0deg);
+            transform: perspective(1800px) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(1800px) rotateY(360deg);
+            transform: perspective(1800px) rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: perspective(1800px) rotateY(0deg);
+            transform: perspective(1800px) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(1800px) rotateY(360deg);
+            transform: perspective(1800px) rotateY(360deg);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -222,5 +244,76 @@ html {
   color: #fff;
   z-index: 10;
   font-size: 6rem;
+}
+
+.social {
+  position: fixed;
+  left: 0;
+  z-index: 100;
+  top: 50%;
+}
+
+.social__instagram, .social__facebook {
+  font-size: 4rem;
+  display: block;
+}
+
+.social__facebook {
+  color: #2c15ff;
+}
+
+.social__instagram {
+  color: #bb5238;
+}
+
+.slider {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.slider__carousel {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+}
+
+.slider__carousel__span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(calc(var(--i)*60deg)) translateZ(500px);
+          transform: rotateY(calc(var(--i)*60deg)) translateZ(500px);
+}
+
+.slider__carousel__span__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 /*# sourceMappingURL=main.css.map */

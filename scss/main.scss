@@ -2,7 +2,7 @@
 @import "animation";
 
 //		NAVIGATION   20-70
-//		HEADER	73-
+//		HEADER	73-103
 
 *,
 *::before,
@@ -102,4 +102,57 @@ html {
 	}
 }
 
+// \\\		S O C I A L    L I N K 		///
+.social{
+	position:fixed;
+	left:0;
+	z-index:100;
+	top:50%;
+	&__instagram,&__facebook{
+		font-size: 4rem;
+		display:block;
+	}
+	&__facebook{
+		color:$fb_color;
+	}
+	&__instagram{
+		color:$insta_color;
+	}
+}
+.slider{
+	height: 100vh;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	overflow: hidden;
+	&__carousel{
+		position: relative;
+		width:400px;
+		height:400px;
+		transform-style: preserve-3d;
+		animation:rotate 30s linear infinite;
+		&__span{
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			transform-origin: center;
+			transform-style: preserve-3d;
+			transform:rotateY(calc(var(--i)*60deg)) translateZ(500px);
+			
+				&__img{
+					position: absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height: 100%;
+					border-radius: 50%;
+					object-fit: cover;
+					transition:2s;
+				}
+			
+		}
+	}
+}
 @import "media";
