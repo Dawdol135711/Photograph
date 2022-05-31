@@ -12,10 +12,14 @@
 	padding: 0;
 }
 
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Poppins', sans-serif;
+
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 	background-color: rgb(51, 50, 50);
+	font-family: 'Poppins', sans-serif;
 }
 
 //  \\\         N A V I G A T I O N         ///
@@ -74,6 +78,14 @@ html {
 
 //  \\\         H E A D E R        ///
 .header {
+	&__h1{
+		color:$white;
+		font-size: 7rem;
+		font-family: 'Bebas Neue';
+	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 100vh;
 	width: 100vw;
 	background-image: url(/img/photographer-g9dd126508_1920.jpg);
@@ -91,9 +103,9 @@ html {
 		z-index: -1;
 	}
 	&__link {
-		position:absolute;
-		bottom:0.5em;
-		left:50%;
+		position: absolute;
+		bottom: 0.5em;
+		left: 50%;
 		transform: translatex(-50%);
 		text-decoration: none;
 		color: $white;
@@ -103,55 +115,88 @@ html {
 }
 
 // \\\		S O C I A L    L I N K 		///
-.social{
-	position:fixed;
-	left:0;
-	z-index:100;
-	top:50%;
-	&__instagram,&__facebook{
+.social {
+	position: fixed;
+	left: 0;
+	z-index: 100;
+	top: 50%;
+	&__instagram,
+	&__facebook {
 		font-size: 4rem;
-		display:block;
+		display: block;
+		background-color: $white;
+		opacity:0.7;
 	}
-	&__facebook{
-		color:$fb_color;
+	&__facebook {
+		color: $fb_color;
 	}
-	&__instagram{
-		color:$insta_color;
+	&__instagram {
+		color: $insta_color;
 	}
 }
-.slider{
+.slider {
+	position: relative;
 	height: 100vh;
-	display:flex;
-	align-items:center;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	&__carousel{
+	&__h1{
+		color:$white;
+		font-size:6rem;
+		letter-spacing: 3px;
+		position:absolute;
+		top:0;
+		padding-top: 2em;
+		left: 50%;
+		transform:translatex(-50%);
+		z-index: 100;
+		font-family: 'Bebas Neue';
+	}
+	&__carousel {
 		position: relative;
-		width:400px;
-		height:400px;
+		width: 400px;
+		height: 400px;
 		transform-style: preserve-3d;
-		animation:rotate 30s linear infinite;
-		&__span{
+		animation: rotate 30s linear infinite;
+		&__span {
 			position: absolute;
-			top:0;
-			left:0;
-			width:100%;
+			top: 0;
+			left: 0;
+			width: 100%;
 			height: 100%;
 			transform-origin: center;
 			transform-style: preserve-3d;
-			transform:rotateY(calc(var(--i)*60deg)) translateZ(500px);
+			transform: rotateY(calc(var(--i) * 60deg)) translateZ(500px);
+
+			&__img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				object-fit: cover;
+				transition: 2s;
+			}
+			&__description {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translatex(-50%);
+				color: $white;
+				font-size: 2rem;
+				opacity:0;
+				transition:opacity 0.5s;
+				transition-delay:0.3s;
+			}
+			&__img:hover {
+				transform: translatey(-50px);
+			}
 			
-				&__img{
-					position: absolute;
-					top:0;
-					left:0;
-					width:100%;
-					height: 100%;
-					border-radius: 50%;
-					object-fit: cover;
-					transition:2s;
-				}
-			
+		}
+		&__span:hover  &__span__description{
+			opacity:1;
 		}
 	}
 }
