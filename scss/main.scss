@@ -18,8 +18,10 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	background-color: rgb(51, 50, 50);
-	font-family: 'Poppins', sans-serif;
+	background-color: #3e3f3f;
+	background-image: linear-gradient(90deg, #3e3f3f 0%, #7c7d7f 69%);
+
+	font-family: "Poppins", sans-serif;
 }
 
 //  \\\         N A V I G A T I O N         ///
@@ -78,10 +80,10 @@ html {
 
 //  \\\         H E A D E R        ///
 .header {
-	&__h1{
-		color:$white;
+	&__h1 {
+		color: $white;
 		font-size: 7rem;
-		font-family: 'Bebas Neue';
+		font-family: "Bebas Neue";
 	}
 	display: flex;
 	justify-content: center;
@@ -125,7 +127,7 @@ html {
 		font-size: 4rem;
 		display: block;
 		background-color: $white;
-		opacity:0.7;
+		opacity: 0.7;
 	}
 	&__facebook {
 		color: $fb_color;
@@ -141,17 +143,17 @@ html {
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	&__h1{
-		color:$white;
-		font-size:6rem;
+	&__h1 {
+		color: $white;
+		font-size: 6rem;
 		letter-spacing: 3px;
-		position:absolute;
-		top:0;
+		position: absolute;
+		top: 0;
 		padding-top: 2em;
 		left: 50%;
-		transform:translatex(-50%);
+		transform: translatex(-50%);
 		z-index: 100;
-		font-family: 'Bebas Neue';
+		font-family: "Bebas Neue";
 	}
 	&__carousel {
 		position: relative;
@@ -186,36 +188,58 @@ html {
 				transform: translatex(-50%);
 				color: $white;
 				font-size: 2rem;
-				opacity:0;
-				transition:opacity 0.5s;
-				transition-delay:0.3s;
+				opacity: 0;
+				transition: opacity 0.5s;
+				transition-delay: 0.3s;
 			}
 			&__img:hover {
 				transform: translatey(-50px);
 			}
-			
 		}
-		&__span:hover  &__span__description{
-			opacity:1;
+		&__span:hover &__span__description {
+			opacity: 1;
 		}
 	}
 }
-.prices{
-	display:flex;
+.prices {
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	&__h2{
-	color:$white;	
-	font-size: 6rem;
-	padding:1em;
+	max-width:1400px;
+	margin:auto;
+	&__h2 {
+		color: $white;
+		font-size: 6rem;
+		padding: 1em;
 	}
-	&__p{
-		color:$white;
+	&__p {
+		color: $white;
 		font-size: 2rem;
-		padding:1.5em;
+		padding: 1.5em;
 		line-height: 150%;
 		letter-spacing: 1.5px;
 	}
 }
 @import "media";
+
+footer{
+	.wrapper{
+		max-width:1400px;
+		margin:auto;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	background-color: $first-color;
+	border-top:2px solid black;
+	.map{
+		display:block;
+		padding:4em;
+	}
+.contact{
+	font-size: 2rem;
+	color:$white;
+	padding:4em;
+}
+}
