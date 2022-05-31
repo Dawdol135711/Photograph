@@ -200,4 +200,22 @@ html {
 		}
 	}
 }
+.prices{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__h2{
+	color:$white;	
+	font-size: 6rem;
+	padding:1em;
+	}
+	&__p{
+		color:$white;
+		font-size: 2rem;
+		padding:1.5em;
+		line-height: 150%;
+		letter-spacing: 1.5px;
+	}
+}
 @import "media";
