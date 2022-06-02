@@ -89,7 +89,6 @@ html {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	width: 100vw;
 	background-image: url(/img/photographer-g9dd126508_1920.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -206,12 +205,14 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-width:1400px;
-	margin:auto;
+	max-width: 1400px;
+	margin: auto;
+	margin-bottom: 7em;
 	&__h2 {
 		color: $white;
 		font-size: 6rem;
 		padding: 1em;
+		font-family: "Bebas Neue";
 	}
 	&__p {
 		color: $white;
@@ -223,23 +224,24 @@ html {
 }
 @import "media";
 
-footer{
-	.wrapper{
-		max-width:1400px;
-		margin:auto;
-		display:flex;
+footer {
+	.wrapper {
+		max-width: 1400px;
+		margin: auto;
+		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	background-color: $first-color;
-	border-top:2px solid black;
-	.map{
-		display:block;
-		padding:4em;
+	border-top: 2px solid black;
+	.map {
+		display: block;
+		padding: 4em;
+		margin-top: 3em;
 	}
-.contact{
-	font-size: 2rem;
-	color:$white;
-	padding:4em;
-}
+	.contact {
+		font-size: 2rem;
+		color: $white;
+		padding: 4em;
+	}
 }

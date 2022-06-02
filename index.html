@@ -12,6 +12,7 @@
 			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<script
 			src="https://kit.fontawesome.com/8acb101a1a.js"
 			crossorigin="anonymous"
@@ -47,7 +48,7 @@
 
 		<!-- \\\         C A R U S E L L        /// -->
 		<section class="slider">
-			<h1 class="slider__h1 text-focus-in">Nasza oferta</h1>
+			<h1 data-aos="fade-up" class="slider__h1">Nasza oferta</h1>
 			<div class="slider__carousel">
 				<span style="--i: 1" class="slider__carousel__span"
 					><p class="slider__carousel__span__description">Lorem, ipsum.</p>
@@ -59,7 +60,10 @@
 				/></span>
 				<span style="--i: 3" class="slider__carousel__span"
 					><p class="slider__carousel__span__description">Lorem, ipsum.</p>
-					<img class="slider__carousel__span__img" src="/img/img3.jpg" alt=""
+					<img
+						class="slider__carousel__span__img"
+						src="/img/284883666_998707647510290_2751615154277358845_n.jpg"
+						alt=""
 				/></span>
 				<span style="--i: 4" class="slider__carousel__span"
 					><p class="slider__carousel__span__description">Lorem, ipsum.</p>
@@ -72,7 +76,7 @@
 			</div>
 		</section>
 		<section class="prices">
-			<h2 class="prices__h2">Wycena</h2>
+			<h2 data-aos="fade-up" class="prices__h2">Wycena</h2>
 			<p class="prices__p">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fuga odit
 				at sapiente alias porro ab quae modi dolore perspiciatis aperiam nostrum
@@ -97,12 +101,32 @@
 				tempora, ex facilis mollitia ratione.
 			</p>
 		</section>
-		<footer><div class="wrapper">
-			<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.8004439516453!2d21.001075951840704!3d52.228843265417936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8d65233559%3A0xeb0bc9f267c74ed9!2sWarszawa%20Centralna!5e0!3m2!1spl!2spl!4v1653983247548!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-			<div class="contact">
-				<p class="contact__p"><strong>Tel: </strong>876-543-2101</p>
-				<p class="contact__p"><strong>E-mail: </strong>expample@mail.mail</p>
-			</div></div>
+		<footer>
+			<div class="wrapper">
+				<div class="map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.8004439516453!2d21.001075951840704!3d52.228843265417936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8d65233559%3A0xeb0bc9f267c74ed9!2sWarszawa%20Centralna!5e0!3m2!1spl!2spl!4v1653983247548!5m2!1spl!2spl"
+						width="600"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					></iframe>
+				</div>
+				<div class="contact">
+					<p class="contact__p"><strong>Tel: </strong>876-543-2101</p>
+					<p class="contact__p"><strong>E-mail: </strong>expample@mail.mail</p>
+				</div>
+			</div>
 		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				startEvent: "DOMContentLoaded",
+				offset: 200,
+				once: "true",
+			});
+		</script>
 	</body>
 </html>
